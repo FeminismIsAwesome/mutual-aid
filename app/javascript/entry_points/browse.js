@@ -1,11 +1,12 @@
 import Vue from 'vue'
-import {PublicListings} from '../components'
+import Browse from '../pages/Browse'
 
 export default function(el) {
   new Vue({
     el,
     render(h) {
-      return h(PublicListings)
+      return h(Browse)
     }
   })
 }
+
