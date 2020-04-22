@@ -16,6 +16,7 @@
   "version": "0.1.0",
   "devDependencies": {
     "@vue/test-utils": "^1.0.0-beta.33",
+    "chai": "^4.2.0",
     "jsdom": "^16.2.2",
     "jsdom-global": "^3.0.2",
     "mocha": "^6",
@@ -25,6 +26,6 @@
     "webpack-dev-server": "^3.10.3"
   },
   "scripts": {
-    "test": "mochapack --webpack-config config/webpack/test.js --require test/setup.js test/**/*.spec.js"
+    "test": "mochapack --webpack-config config/webpack/test.js --require spec/javascript/setup.js --colors spec/javascript/**/*.spec.js"
   }
 }
