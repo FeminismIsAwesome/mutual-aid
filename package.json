@@ -24,9 +24,10 @@
     "mocha-junit-reporter": "^1.23.3",
     "mochapack": "^1.1.15",
     "webpack-cli": "^3.3.11",
-    "webpack-dev-server": "^3.10.3"
+    "webpack-dev-server": "^3.10.3",
+    "webpack-node-externals": "1.7.2"
   },
   "scripts": {
-    "test": "mochapack --webpack-config config/webpack/test.js --require spec/javascript/setup.js --colors -u bdd-lazy-var/global spec/javascript/**/*.spec.js"
+    "test": "mochapack --webpack-config config/webpack/test.js --require spec/javascript/setup.js --colors -u bdd-lazy-var/global 'spec/javascript/**/*.spec.js'"
   }
 }

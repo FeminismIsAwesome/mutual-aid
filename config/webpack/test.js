@@ -15,5 +15,16 @@ const environment = require('./environment')
 
 const babelLoader = environment.loaders.get('babel')
 babelLoader.include.push(babelLoader.include[0].concat('../../test'))
+const nodeExternals = require('webpack-node-externals')
+
+environment.config.merge({
+  output: {
+    devtoolModuleFilenameTemplate: '[absoluteresourcepath]',
+    devtoolFallbackModuleFilenameTemplate: '[absoluteresourcepath]?[hash]',
+  },
+  mode: 'development',
+  externals: [nodeExternals()],
+  devtool: 'inlinecheapmodulesourcemap',
+})
 
 module.exports = environment.toWebpackConfig()
