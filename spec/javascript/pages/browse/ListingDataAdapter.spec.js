@@ -1,4 +1,3 @@
-import { assert } from 'chai'
 import ListingDataAdapter from 'pages/browse/ListingDataAdapter'
 
 describe('ListingDataAdapter', function () {

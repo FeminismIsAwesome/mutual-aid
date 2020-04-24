@@ -1,4 +1,3 @@
-import {assert} from 'chai'
 import {shallowMount} from '@vue/test-utils'
 import TagList from 'components/TagList'
 

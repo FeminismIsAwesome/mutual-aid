@@ -1,4 +1,3 @@
-import {assert} from 'chai'
 import {mount} from '@vue/test-utils'
 import TileBrowser from 'pages/browse/ListBrowser'
 import ListingDataAdapter from 'pages/browse/ListingDataAdapter'

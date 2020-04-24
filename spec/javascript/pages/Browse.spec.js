@@ -1,4 +1,3 @@
-import { assert } from 'chai'
 import { mount, shallowMount } from '@vue/test-utils'
 import Browse from 'pages/Browse.vue'
 import ListBrowser from 'pages/browse/ListBrowser'
