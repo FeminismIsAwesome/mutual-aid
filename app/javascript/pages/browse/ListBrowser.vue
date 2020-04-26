@@ -8,7 +8,7 @@
         <th>Location</th>
         <th>Details</th>
       </tr>
-      <tr v-for="listing in denormalizedListings" :key="listing.id">
+      <tr v-for="listing in listings" :key="listing.id">
         <td><TagList :tags="listing.categoryTags" /></td>
         <td>{{ listing.availability }}</td>
         <td><TagList :tags="listing.locationTags" /></td>
@@ -25,19 +25,6 @@ export default {
   props: {
     listings: {type: Array, default: () => []},
     filters: Object,
-    helper: Object,
-  },
-  computed: {
-    denormalizedListings() {
-      var that = this
-      return this.listings.map((listing) => {
-        listing.categoryTags = listing.categories.map((category_id) =>
-          that.helper.category_for(category_id)
-        )
-        listing.locationTags = [that.helper.location_for(listing.location)]
-        return listing
-      })
-    },
   },
   components: {
     TagList,
