@@ -6,10 +6,10 @@ it('works with reasonable data', function () {
   const testData = require('../../../../lib/listings.json')
   var wrapper = mount(ListBrowser, {
     propsData: {
-      listings: testData.listings,
+      listings: testData.contributions,
       helper: new ListingDataAdapter({
         categories: testData.categories,
-        locations: testData.locations,
+        locations: testData.service_areas,
       }),
     },
   })
